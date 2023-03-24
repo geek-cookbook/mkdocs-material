@@ -94,3 +94,14 @@ EXPOSE 8000
 # Start development server by default
 ENTRYPOINT ["mkdocs"]
 CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+
+# Additional requirements for geek-cookbook
+# RUN apk add --no-cache py3-pip
+
+RUN pip install \
+        mkdocs-autolinks-plugin \
+        mkdocs-htmlproofer-plugin \
+	      mkdocs-git-revision-date-localized-plugin \
+        mkdocs-macros-plugin \
+        mkdocs-meta-descriptions-plugin \
+        livereload
