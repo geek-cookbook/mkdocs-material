@@ -11,7 +11,7 @@ name: Push ghcr image on commit
 
 on:
   push:
-  workflow_despatch:
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
