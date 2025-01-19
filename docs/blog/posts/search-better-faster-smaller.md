@@ -9,8 +9,8 @@ categories:
   - Search
   - Performance
 links:
-  - setup/setting-up-site-search.md#built-in-search-plugin
-  - insiders/index.md#how-to-become-a-sponsor
+  - plugins/search.md
+  - insiders/how-to-sponsor.md
 ---
 
 # Search: better, faster, smaller
@@ -36,7 +36,7 @@ implementation. If you immediately want to learn what's new, skip to the
 [section just after that][what's new]._
 
   [search]: ../../setup/setting-up-site-search.md
-  [multilingual]: ../../setup/setting-up-site-search.md#lang
+  [multilingual]: ../../plugins/search.md#config.lang
   [offline-capable]: ../../setup/building-for-offline-usage.md
   [what's new]: #whats-new
 
@@ -58,7 +58,7 @@ const index$ = document.forms.namedItem("search")
 
   [lunr]: https://lunrjs.com
   [lunr-languages]: https://github.com/MihaiValentin/lunr-languages
-  [built-in search plugin]: ../../setup/setting-up-site-search.md#built-in-search-plugin
+  [built-in search plugin]: ../../plugins/search.md
 
 ### Search index
 
@@ -176,10 +176,10 @@ which creates and manages the [lunr] search index. When search is initialized,
 the following steps are taken:
 
   [^1]:
-    Prior to :octicons-tag-24: 5.0.0, search was carried out in the main thread 
-    which locked up the browser, rendering it unusable. This problem was first
-    reported in #904 and, after some back and forth, fixed and released in
-    :octicons-tag-24: 5.0.0.
+    Prior to <!-- md:version 5.0.0 -->, search was carried out in the main
+    thread  which locked up the browser, rendering it unusable. This problem was
+    first reported in #904 and, after some back and forth, fixed and released in
+    <!-- md:version 5.0.0 -->.
 
 1.  __Linking sections with pages__: The search index is parsed, and each
     section is linked to its parent page. The parent page itself is _not
@@ -196,7 +196,7 @@ the following steps are taken:
     > can achieve with a tokenizer that is capable of separating strings with
     > lookahead.
 
-1.  __Indexing__: As a final step, each section is indexed. When querying the
+3.  __Indexing__: As a final step, each section is indexed. When querying the
     index, if a search query includes one of the tokens as returned by step 2.,
     the section is considered to be part of the search result and passed to the
     main thread.
@@ -206,7 +206,7 @@ more magic involved, e.g., search results are [post-processed] and [rescored] to
 account for some shortcomings of [lunr], but in general, this is how data gets
 into and out of the index.
 
-  [separator]: ../../setup/setting-up-site-search.md#search-separator
+  [separator]: ../../plugins/search.md#config.separator
   [default tokenizer]: https://github.com/olivernn/lunr.js/blob/aa5a878f62a6bba1e8e5b95714899e17e8150b38/lunr.js#L413-L456
   [post-processed]: https://github.com/squidfunk/mkdocs-material/blob/ec7ccd2b2d15dd033740f388912f7be7738feec2/src/assets/javascripts/integrations/search/_/index.ts#L249-L272
   [rescored]: https://github.com/squidfunk/mkdocs-material/blob/ec7ccd2b2d15dd033740f388912f7be7738feec2/src/assets/javascripts/integrations/search/_/index.ts#L274-L275
@@ -244,7 +244,7 @@ carefully considered:
    stopping at a whitespace character when enough words have been consumed. A
    preview might look like this:
 
-    ``` 
+    ```
     … channels, e.g., or which can be configured via mkdocs.yml …
     ```
 
@@ -262,7 +262,7 @@ carefully considered:
     China and Japan are both within the top 5 countries of origin of users of
     Material for MkDocs.
 
-  [truncated]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/javascripts/templates/search/index.tsx#L90
+  [truncated]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/javascripts/templates/search/index.tsx#L90
   [search preview]: search-better-faster-smaller/search-preview.png
   [Just the Docs]: https://pmarsceill.github.io/just-the-docs/
   [Docusaurus]: https://github.com/lelouch77/docusaurus-lunr-search
@@ -286,7 +286,7 @@ it brings:
 
 - __Better__: support for [rich search previews], preserving the structural
   information of code blocks, inline code, and lists, so they are rendered
-  as-is, as well as [lookahead tokenization], [more accurate highlighting], and 
+  as-is, as well as [lookahead tokenization], [more accurate highlighting], and
   improved stability of typeahead. Also, a [slightly better UX].
 - __Faster__ and __smaller__: significant decrease in search index size of up
   to 48% due to improved extraction and construction techniques, resulting in a
@@ -463,7 +463,7 @@ also demonstrates that this now even works properly for search queries.[^5]
 
   [^5]:
     Previously, the search query was not correctly tokenized due to the way
-    [lunr] treats wildcards, as it disables the pipeline for search terms that 
+    [lunr] treats wildcards, as it disables the pipeline for search terms that
     contain wildcards. In order to provide a good typeahead experience,
     Material for MkDocs adds wildcards to the end of each search term not
     explicitly preceded with `+` or `-`, effectively disabling tokenization.
@@ -486,7 +486,7 @@ digit `\d`, which leaves version numbers discoverable. Searching for
 [:octicons-search-24: 7.2.6][q=7.2.6] brings up the [7.2.6] release notes.
 
   [q=7.2.6]: ?q=7.2.6
-  [7.2.6]: ../../changelog/index.md#726-_-september-1-2021
+  [7.2.6]: ../../changelog/index.md#7.2.6
 
 #### HTML/XML tags
 
@@ -499,18 +499,11 @@ following expression to the separator allows for just that:
 &[lg]t;
 ```
 
-Searching for [:octicons-search-24: custom search worker script][q=script] 
-brings up the section on [custom search] and matches the `script` tag among the
-other search terms discovered.
-
 ---
 
 _We've only just begun to scratch the surface of the new possibilities
 tokenizer lookahead brings. If you found other useful expressions, you're
 invited to share them in the comment section._
-
-  [q=script]: ?q=custom+search+worker+script
-  [custom search]: ../../setup/setting-up-site-search.md#custom-search
 
 ### Accurate highlighting
 
@@ -548,7 +541,7 @@ powerful as tokenization:
     Now, only the content blocks that actually contain occurrences of one of
     the search terms are considered for inclusion into the search preview. If a
     term only occurs in a code block, it's the code block that gets rendered,
-    see, for example, the results of 
+    see, for example, the results of
     [:octicons-search-24: twitter][q=twitter].
 
   [regular expressions]: https://github.com/squidfunk/mkdocs-material/blob/ec7ccd2b2d15dd033740f388912f7be7738feec2/src/assets/javascripts/integrations/search/highlighter/index.ts#L61-L91
@@ -634,4 +627,4 @@ for MkDocs! This is the first blog article that I decided to write after a
 short [Twitter survey] made me to. You're invited to leave a comment
 to share your experiences with the new search implementation.
 
-  [Twitter survey]: https://twitter.com/squidfunk/status/1434477478823743488
+  [X survey]: https://x.com/squidfunk/status/1434477478823743488

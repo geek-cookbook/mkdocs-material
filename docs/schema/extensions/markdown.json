@@ -32,7 +32,8 @@
       "markdownDescription": "https://github.com/oprypin/markdown-callouts",
       "enum": [
         "markdown.extensions.callouts",
-        "callouts"
+        "callouts",
+        "github-callouts"
       ]
     },
     {
@@ -60,6 +61,14 @@
       ]
     },
     {
+      "title": "Sane Lists – Python Markdown",
+      "markdownDescription": "https://python-markdown.github.io/extensions/sane_lists/",
+      "enum": [
+        "markdown.extensions.sane_lists",
+        "sane_lists"
+      ]
+    },
+    {
       "title": "Tables – Python Markdown",
       "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables",
       "enum": [
@@ -73,10 +82,10 @@
           "type": "object",
           "properties": {
             "toc": {
-              "$ref": "#/definitions/toc"
+              "$ref": "#/$defs/toc"
             },
             "markdown.extensions.toc": {
-              "$ref": "#/definitions/toc"
+              "$ref": "#/$defs/toc"
             }
           },
           "additionalProperties": false
@@ -92,7 +101,7 @@
       ]
     }
   ],
-  "definitions": {
+  "$defs": {
     "toc": {
       "title": "Table Of Contents – Python Markdown",
       "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents",

@@ -6,19 +6,19 @@ title: Getting started with Insiders
 
 Material for MkDocs Insiders is a compatible drop-in replacement for Material
 for MkDocs, and can be installed similarly using [`pip`][pip],
-[`docker`][docker] or [`git`][git]. Note that in order to access the Insiders 
+[`docker`][docker] or [`git`][git]. Note that in order to access the Insiders
 repository, you need to [become an eligible sponsor] of @squidfunk on GitHub.
 
   [pip]: #with-pip
   [docker]: #with-docker
   [git]: #with-git
-  [become an eligible sponsor]: index.md#how-to-become-a-sponsor
+  [become an eligible sponsor]: how-to-sponsor.md
 
 ## Requirements
 
 After you've been added to the list of collaborators and accepted the
 repository invitation, the next step is to create a [personal access token] for
-your GitHub account in order to access the Insiders repository programmatically 
+your GitHub account in order to access the Insiders repository programmatically
 (from the command line or GitHub Actions workflows):
 
 1.  Go to https://github.com/settings/tokens
@@ -30,20 +30,38 @@ your GitHub account in order to access the Insiders repository programmatically
   [Generate a new token]: https://github.com/settings/tokens/new
   [scopes]: https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes
 
+Some of the instructions below require that the `GH_TOKEN` environment
+variable is set to the value of the personal access token you
+generated in the previous step. Note that the personal access token
+must be kept secret at all times, as it allows the owner to access
+your private repositories.
+
 ## Installation
 
 ### with pip
 
-Material for MkDocs Insiders can be installed with `pip`:
+Material for MkDocs Insiders can be installed with `pip`. You will
+normally want to install the latest release but can also install a
+specific older release or even the latest development version.
+Make sure you have the `GH_TOKEN` variable set as instructed above.
 
-``` sh
-pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-```
+=== "Specific release"
 
-The `GH_TOKEN` environment variable must be set to the value of the personal
-access token you generated in the previous step. Note that the personal access
-token must be kept secret at all times, as it allows the owner to access your
-private repositories.
+    Pick the corresponding tag from the [list of tags] for the Insiders
+    repository. In the `pip` command below, replace the tag at the
+    end of the URL with the one you want.
+
+    ``` sh
+    pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0
+    ```
+
+=== "Latest"
+
+    ``` sh
+    pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+    ```
+
+[list of tags]: https://github.com/squidfunk/mkdocs-material-insiders/tags
 
 ### with docker
 
@@ -65,10 +83,10 @@ comfortable self-hosting:
 5.  [Create a new release] to build and publish the Docker image
 6.  Install [Pull App] on your fork to stay in-sync with upstream
 
-The [`publish`][publish] workflow[^5] is automatically run when a new tag
-(release) is created. When a new Insiders version is released on the upstream 
+The [`build`][build] workflow is automatically run when a new tag
+(release) is created. When a new Insiders version is released on the upstream
 repository, the [Pull App] will create a pull request with the changes and
-pull in the new tag, which is picked up by the [`publish`][publish] workflow
+pull in the new tag, which is picked up by the [`build`][build] workflow
 that builds and publishes the Docker image automatically to your private
 registry.
 
@@ -79,13 +97,16 @@ docker login -u ${GH_USERNAME} -p ${GHCR_TOKEN} ghcr.io
 docker pull ghcr.io/${GH_USERNAME}/mkdocs-material-insiders
 ```
 
+Should you wish to add additional plugins to the insiders container image, follow the steps
+outlined in the [Getting Started guide](../getting-started.md#with-docker).
+
   [^2]:
     Earlier, Insiders provided a dedicated Docker image which was available to
     all sponsors. On March 21, 2021, the image was deprecated for the reasons
     outlined and discussed in #2442. It was removed on June 1, 2021.
 
   [^3]:
-    When forking a repository, GitHub will disables all workflows. While this
+    When forking a repository, GitHub will disable all workflows. While this
     is a reasonable default setting, you need to enable GitHub Actions to be
     able to automatically build and publish a Docker image on
     [GitHub Container Registry].
@@ -94,12 +115,6 @@ docker pull ghcr.io/${GH_USERNAME}/mkdocs-material-insiders
     While you could just add the `write:packages` scope to the personal access
     token created to access the Insiders repository, it's safer to create a
     dedicated token which you'll only use for publishing the Docker image.
-
-  [^5]:
-    The Insiders repository contains two GitHub Actions workflows:
-
-    - `build.yml` – Build and lint the project (disabled on forks)
-    - `publish.yml` – Build and publish the Docker image
 
 ### with git
 
@@ -124,88 +139,40 @@ pip install -e mkdocs-material
   [GitHub Actions secret]: https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository
   [Create a new release]: https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release
   [Pull App]: https://github.com/apps/pull
-  [publish]: https://github.com/squidfunk/mkdocs-material-insiders/blob/master/.github/workflows/publish.yml
+  [build]: https://github.com/squidfunk/mkdocs-material-insiders/blob/master/.github/workflows/build.yml
 
-## Upgrading
+## Built-in plugins
 
-When upgrading Insiders, you should always check the version of Material for
-MkDocs which makes up the first part of the version qualifier, e.g.Insiders
-`4.x.x` is currently based on `8.x.x`:
+When you're using built-in plugins that are solely available via Insiders,
+outside contributors won't be able to build your documentation project on their
+local machine. This is the reason why we developed the [built-in group plugin]
+that allows to conditionally load plugins:
 
-```
-8.x.x-insiders-4.x.x
-```
+``` yaml
+plugins:
+  - search
+  - social
 
-If the major version increased, it's a good idea to consult the [upgrade
-guide] and go through the steps to ensure your configuration is up to date and
-all necessary changes have been made. If you installed Insiders via `pip`, you
-can upgrade your installation with the following command:
+  # CI=1 mkdocs build
+  - group:
+      enabled: !ENV CI
+      plugins:
+        - git-revision-date-localized
+        - git-committers
 
-```
-pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-```
-
-  [upgrade guide]: ../upgrade.md
-
-## Caveats
-
-This section describes some aspects to consider when using Insiders together
-with Material for MkDocs to ensure that users without access to Insiders can
-still build your documentation.
-
-### Built-in plugins
-
-When using built-in plugins that are solely available via Insiders, it might be 
-necessary to split the `mkdocs.yml` configuration into a base configuration, and
-one with plugin overrides. Note that this is a limitation of MkDocs, which can
-be mitigated by using [configuration inheritance]:
-
-=== ":octicons-file-code-16: `mkdocs.insiders.yml`"
-
-    ``` yaml
-    INHERIT: mkdocs.yml
-    plugins:
-      - search
-      - social
-      - tags
-    ```
-
-=== ":octicons-file-code-16: `mkdocs.yml`"
-
-    ``` yaml
-    # Configuration with everything except Insiders plugins
-    ```
-
-Now, when you're in an environment with access to Insiders (e.g. in your CI
-pipeline), you can build your documentation project with the following lines:
-
-```
-mkdocs build --config-file mkdocs.insiders.yml
+  # INSIDERS=1 mkdocs build
+  - group:
+      enabled: !ENV INSIDERS
+      plugins:
+        - optimize
+        - privacy
 ```
 
-!!! tip "Sharing plugin and extension configuration"
+Of course, you can also enable both groups with:
 
-    If you want to share `plugins` or `markdown_extensions` between both
-    configuration files `mkdocs.insiders.yml` and `mkdocs.yml`, you can use
-    the alternative key-value syntax in both files. The above example would
-    then look like:
+```
+CI=1 INSIDERS=1 mkdocs build
+```
 
-    === ":octicons-file-code-16: `mkdocs.insiders.yml`"
-
-        ``` yaml
-        INHERIT: mkdocs.yml
-        plugins:
-          social: {}
-        ```
-
-    === ":octicons-file-code-16: `mkdocs.yml`"
-
-        ``` yaml
-        # Additional configuration above
-        plugins:
-          search: {}
-          tags: {}
-        ```
-
-
+  [built-in group plugin]: ../plugins/group.md
   [configuration inheritance]: https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance

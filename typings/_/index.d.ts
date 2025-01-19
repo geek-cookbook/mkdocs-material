@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -99,5 +99,6 @@ declare global {
   var screen$: Observable<boolean>     /* Media screen observable */
   var print$: Observable<boolean>      /* Media print observable */
   var alert$: Subject<string>          /* Alert subject */
+  var progress$: Subject<number>       /* Progress indicator subject */
   var component$: Observable<Component>/* Component observable */
 }

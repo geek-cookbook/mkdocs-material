@@ -44,6 +44,11 @@
       "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#edit_uri",
       "type": "string"
     },
+    "edit_uri_template": {
+      "title": "More flexible variant of edit_uri",
+      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#edit_uri_template",
+      "type": "string"
+    },
     "copyright": {
       "title": "Copyright, used in footer",
       "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice",
@@ -96,9 +101,8 @@
       "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-javascript",
       "type": "array",
       "items": {
-        "title": "Path to JavaScript file",
-        "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-javascript",
-        "pattern": "\\.js($|\\?)"
+        "title": "Path to JavaScript file (may be local or absolute URL to external JS)",
+        "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-javascript"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -153,6 +157,19 @@
     },
     "nav": {
       "$ref": "schema/nav.json"
+    },
+    "validation": {
+      "$ref": "schema/validation.json"
+    },
+    "exclude_docs": {
+      "title": "Pattern to declare files to exclude from build",
+      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#exclude_docs",
+      "type": "string"
+    },
+    "not_in_nav": {
+      "title": "Pattern to declare pages that do not appear in the navigation",
+      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#not_in_nav",
+      "type": "string"
     },
     "watch": {
       "items": {

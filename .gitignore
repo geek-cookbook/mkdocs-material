@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -55,10 +55,6 @@ example.zip
 # Never ignore .gitkeep files
 !**/.gitkeep
 
-# Husky hooks
-.husky/.gitignore
-.husky/_
-
 # macOS internals
 .DS_Store
 
@@ -66,5 +62,6 @@ example.zip
 TODO
 tmp
 
-# IDEs
+# IDEs & Editors
 .idea
+*~

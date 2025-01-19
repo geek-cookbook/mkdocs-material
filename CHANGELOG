@@ -1,3 +1,984 @@
+mkdocs-material-9.5.50 (2025-01-18)
+
+  * Fixed #7913: Social plugin renders attribute lists in page title
+
+mkdocs-material-9.5.49+insiders-4.53.15 (2025-01-15)
+
+  * Fixed #7896: Scoped tags listings not rendering in subsections
+
+mkdocs-material-9.5.49 (2024-12-16)
+
+  * Adjusted title color in dark mode for all supported Mermaid.js diagrams
+  * Fixed #7803: Privacy plugin crashes on generated files
+  * Fixed #7781: Mermaid.js flow chart title not visible in dark mode
+
+mkdocs-material-9.5.48 (2024-12-08)
+
+  * Fixed #7774: Disabling social cards doesn't work
+
+mkdocs-material-9.5.47 (2024-12-01)
+
+  * Fixed #7750: Numeric tags break search
+  * Fixed #7748: Blog plugin breaks when using future drafts (9.5.45 regression)
+
+mkdocs-material-9.5.46 (2024-11-25)
+
+  * Added support for removing preload hints in privacy plugin
+  * Fixed #7734: Code blocks in h5 headlines are uppercased
+  * Fixed #7725: Blog plugin crashing on missing timezone (9.5.45 regression)
+
+mkdocs-material-9.5.45 (2024-11-20)
+
+  * Reduced size of Docker image through multi-stage build
+  * Fixed #7708: Blog plugin crashing on YAML dates with timezones
+
+mkdocs-material-9.5.44 (2024-11-05)
+
+  * Fixed #7672: Font CSS 404's when using privacy plugin (9.5.43 regression)
+
+mkdocs-material-9.5.43 (2024-10-31)
+
+  * Added support for external images in SVGs in privacy plugin
+  * Fixed #7651: Privacy plugin doesn't handle quoted URLs in CSS
+
+mkdocs-material-9.5.42 (2024-10-20)
+
+  * Fixed #7625: Invalid encoding of boolean attributes in privacy plugin
+  * Fixed #7624: Crash when disabling privacy plugin (9.5.41 regression)
+
+mkdocs-material-9.5.41 (2024-10-15)
+
+  * Fixed #7619: Improved tooltip on logo disappears after instant navigation
+  * Fixed #7616: Race condition in built-in privacy plugin when inlining assets
+  * Fixed #7615: Comments and "Was this page helpful?" visible when printing
+
+mkdocs-material-9.5.40 (2024-10-10)
+
+  * Updated Latvian translations
+  * Fixed #7597: Social cards not using site name on home page
+
+mkdocs-material-9.5.39+insiders-4.53.14 (2024-09-29)
+
+  * Fixed #7567: Empty headlines when using typeset plugin with anchorlinks
+
+mkdocs-material-9.5.39 (2024-09-29)
+
+  * Fixed #7226: not staying on page when using mike's canonical versioning
+
+mkdocs-material-9.5.38 (2024-09-26)
+
+  * Added Albanian translations
+
+mkdocs-material-9.5.37 (2024-09-25)
+
+  * Added 4th and 5th level ordered list styles
+  * Fixed #7548: Tags have no spacing in search
+
+mkdocs-material-9.5.36 (2024-09-21)
+
+  * Fixed #7544: Social cards incorrectly rendering HTML entities
+  * Fixed #7542: Improved support for setting custom list styles
+
+mkdocs-material-9.5.35 (2024-09-18)
+
+  * Fixed #7498: Search not showing for Vietnamese language
+
+mkdocs-material-9.5.34+insiders-4.53.13 (2024-09-14)
+
+  * Fixed #7520: Social plugin errors for generated files (MkDocs 1.6+)
+
+mkdocs-material-9.5.34 (2024-08-31)
+
+  * Updated Mermaid.js to version 11 (latest)
+
+mkdocs-material-9.5.33 (2024-08-23)
+
+  * Fixed #7453: Incorrect position of tooltip when sorting table
+
+mkdocs-material-9.5.32 (2024-08-19)
+
+  * Fixed RXSS vulnerability via deep link in search results
+  * Added support for fetching latest release from GitLab
+
+mkdocs-material-9.5.31+insiders-4.53.12 (2024-08-02)
+
+  * Fixed #7410: Instant previews jump on content tabs with anchor links
+  * Fixed #7408: Instant previews jump on content tabs
+
+mkdocs-material-9.5.31 (2024-08-02)
+
+  * Fixed #7405: DockerHub missing images > 9.5.27 due to change in Alpine/APK
+
+mkdocs-material-9.5.30 (2024-07-23)
+
+  * Fixed #7380: Navigation icons disappearing on hover in Safari
+  * Fixed #7367: Blog readtime computation includes SVG text content
+
+mkdocs-material-9.5.29 (2024-07-14)
+
+  * Updated Galician translations
+  * Fixed #7362: Annotations in figure captions rendering incorrectly
+
+mkdocs-material-9.5.28 (2024-07-02)
+
+  * Fixed #7313: Improved tooltips mounted in sidebar when feature is disabled
+
+mkdocs-material-9.5.27 (2024-06-16)
+
+  * Updated Estonian translations
+
+mkdocs-material-9.5.26 (2024-06-06)
+
+  * Fixed #7232: Tab switches on scroll when linking tabs (9.5.19 regression)
+  * Fixed #7230: Blog author avatar broken when referring to local file
+
+mkdocs-material-9.5.25+insiders-4.53.11 (2024-05-27)
+
+  * Fixed projects plugin crashing when serving before building subprojects
+
+mkdocs-material-9.5.25 (2024-05-27)
+
+  * Fixed #7209: Tags plugin crashing on numeric tags
+
+mkdocs-material-9.5.24+insiders-4.53.10 (2024-05-20)
+
+  * Fixed projects plugin crashing in serve mode when disabled
+  * Fixed projects plugin crashing when building nested projects
+
+mkdocs-material-9.5.24+insiders-4.53.9 (2024-05-20)
+
+  * Fixed #7191: Tags listings not rendering when toc_depth is changed
+
+mkdocs-material-9.5.24 (2024-05-20)
+
+  * Fixed #7187: Version selector title rendering issue
+
+mkdocs-material-9.5.23 (2024-05-15)
+
+  * Fixed #7183: Edge case in anchor navigation when using instant navigation
+  * Fixed #6436: Version selector not showing version alias
+
+mkdocs-material-9.5.22 (2024-05-12)
+
+  * Fixed #7170: Copy button adds empty lines for line spans (9.5.18 regression)
+  * Fixed #7160: Version switching doesn't stay on page (9.5.5 regression)
+  * Fixed #5619: Links in Mermaid.js diagrams not discernible
+
+mkdocs-material-9.5.21 (2024-05-03)
+
+  * Fixed #7133: Ensure latest version of Mermaid.js is used
+  * Fixed #7125: Added warning for dotfiles in info plugin
+
+mkdocs-material-9.5.20 (2024-04-29)
+
+  * Fixed deprecation warning in privacy plugin (9.5.19 regression)
+  * Fixed #7119: Tags plugin emits deprecation warning (9.5.19 regression)
+  * Fixed #7118: Social plugin crashes if fonts are disabled (9.5.19 regression)
+  * Fixed #7085: Social plugin crashes on Windows when downloading fonts
+
+mkdocs-material-9.5.19+insiders-4.53.8 (2024-04-26)
+
+  * Fixed #7052: Preview extension automatically including all pages
+  * Fixed #7051: Instant previews mounting on footnote references
+  * Fixed #5165: Improved tooltips not mounting in sidebar for typeset plugin
+
+mkdocs-material-9.5.19+insiders-4.53.7 (2024-04-25)
+
+  * Fixed #7060: Incorrect resolution of translation when using static-i18n
+
+mkdocs-material-9.5.19 (2024-04-25)
+
+  * Updated MkDocs to 1.6 and limited version to < 2
+  * Updated Docker image to latest Alpine Linux
+  * Removed setup.py, now that GitHub fully understands pyproject.toml
+  * Improved interop of social plugin with third-party MkDocs themes
+  * Fixed #7099: Blog reading time not rendered correctly for Japanese
+  * Fixed #7097: Improved resilience of tags plugin when no tags are given
+  * Fixed #7090: Active tab indicator in nested content tabs rendering bug
+
+mkdocs-material-9.5.18 (2024-04-16)
+
+  * Refactored tooltips implementation to fix positioning issues
+  * Fixed #7044: Rendering glitch when hovering contributor avatar in Chrome
+  * Fixed #7043: Highlighted lines in code blocks cutoff on mobile
+  * Fixed #6910: Incorrect position of tooltip for page status in sidebar
+  * Fixed #6760: Incorrect position and overly long tooltip in tables
+  * Fixed #6488: Incorrect position and cutoff tooltip in content tabs
+
+mkdocs-material-9.5.17+insiders-4.53.6 (2024-04-05)
+
+  * Ensure working directory is set for projects when using projects plugin
+  * Fixed #6970: Incorrect relative paths in git submodules with projects plugin
+
+mkdocs-material-9.5.17+insiders-4.53.5 (2024-04-02)
+
+  * Fixed social plugin crashing when no colors are specified in palettes
+
+mkdocs-material-9.5.17 (2024-04-02)
+
+  * Updated Serbian translations
+  * Fixed #7003: Confusing keyboard interaction for palette toggle
+  * Fixed #7001: Blog posts now show time by default (9.5.16 regression)
+  * Fixed edge case in backport of social plugin font loading logic
+
+mkdocs-material-9.5.16+insiders-4.53.4 (2024-03-31)
+
+  * Fixed #6973: Escaping issue in tags extra files deprecation helper
+
+mkdocs-material-9.5.16 (2024-03-31)
+
+  * Updated Russian translations
+  * Improved error handling and reporting in social plugin
+  * Improved error handling and reporting in privacy plugin
+  * Fixed blog plugin not allowing to use time in format strings
+  * Fixed #6983: Social plugin crashes because of Google Fonts API change
+
+mkdocs-material-9.5.15+insiders-4.53.3 (2024-03-23)
+
+  * Added support for font variants in social plugin
+  * Improved resilience of font resolution in social plugin
+  * Fixed tag listing sometimes not being auto-populated
+  * Fixed tag listing scope not being correctly resolved
+  * Fixed #6941: Meta plugin adding duplicate entries
+  * Fixed #6928: Social plugin crashes for some fonts
+
+mkdocs-material-9.5.15 (2024-03-23)
+
+  * Reverted fix for transparent iframes (9.5.14)
+  * Fixed #6929: Interference of social plugin and auto dark mode
+  * Fixed #6938: Giscus shows dark background in light mode (9.5.14 regression)
+
+mkdocs-material-9.5.14+insiders-4.53.2 (2024-03-18)
+
+  * Fixed abort on first non-matching configuration in preview extension
+  * Fixed #6914: Meta files take precedence over front matter
+
+mkdocs-material-9.5.14 (2024-03-18)
+
+  * Added support for hiding versions from selector when using mike
+  * Added init system to improve signal handling in Docker image
+  * Fixed edge cases in exclusion logic of info plugin
+  * Fixed inability to reset pipeline in search plugin
+  * Fixed syntax error in Finnish translations
+  * Fixed #6917: UTF-8 encoding problems in blog plugin on Windows
+  * Fixed #6889: Transparent iframes get background color
+
+mkdocs-material-9.5.13+insiders-4.53.1 (2024-03-06)
+
+  * Fixed #6877: Projects plugin computes incorrect path to assets
+  * Fixed #6869: Blog plugin should emit warning on invalid related link
+
+mkdocs-material-9.5.13 (2024-03-06)
+
+  * Updated Slovak translations
+  * Improved info plugin interop with projects plugin
+  * Improved info plugin inclusion/exclusion logic
+  * Fixed info plugin not gathering files recursively
+  * Fixed #6750: Ensure info plugin packs up all necessary files
+
+mkdocs-material-9.5.12 (2024-02-29)
+
+  * Fixed #6846: Some meta tags removed on instant navigation (9.4.2 regression)
+  * Fixed #6823: KaTex not rendering on instant navigation (9.5.5 regression)
+  * Fixed #6821: Privacy plugin doesn't handle URLs with encoded characters
+
+mkdocs-material-9.5.11+insiders-4.53.0 (2024-02-24)
+
+  * Added support for automatic instant previews
+  * Added support for pinned blog posts
+
+mkdocs-material-9.5.11 (2024-02-19)
+
+  * Updated Finnish translation
+
+mkdocs-material-9.5.10+insiders-4.52.3 (2024-02-21)
+
+  * Fixed resolution of URLs in instant previews
+  * Fixed instant previews not mounting for same-page links
+
+mkdocs-material-9.5.10 (2024-02-19)
+
+  * Updated Bahasa Malaysia translations
+  * Fixed #6783: Hide continue reading link for blog posts without separators
+  * Fixed #6779: Incorrect positioning of integrated table of contents
+
+mkdocs-material-9.5.9 (2024-02-10)
+
+  * Fixed navigation pruning with tabs and sections enabled
+
+mkdocs-material-9.5.8+insiders-4.52.2 (2024-02-07)
+
+  * Fixed #6735: Instant previews misplaced when below tabs
+
+mkdocs-material-9.5.8 (2024-02-07)
+
+  * Added Tamil translations
+  * Updated Esperanto translations
+  * Fixed relative images not being resolved for instant navigation
+
+mkdocs-material-9.5.7 (2024-02-03)
+
+  * Fixed #6731: Small images in figures are not centered
+  * Fixed #6719: Instant navigation breaks table of contents (9.5.5 regression)
+
+mkdocs-material-9.5.6+insiders-4.52.1 (2024-01-30)
+
+  * Fixed #6705: Navigation path not being hidden when specified
+  * Fixed #6703: New tags plugin crashes on Windows (2nd attempt)
+
+mkdocs-material-9.5.6+insiders-4.52.0 (2024-01-28)
+
+  * Added support for instant previews
+  * Fixed footnote tooltips positioning edge cases
+  * Fixed #6703: New tags plugin crashes on Windows
+
+mkdocs-material-9.5.6 (2024-01-28)
+
+  * Fixed #6700: Missing styles for Mermaid.js labels with Markdown
+
+mkdocs-material-9.5.5+insiders-4.51.0 (2024-01-24)
+
+  * Added support for footnote tooltips
+
+mkdocs-material-9.5.5 (2024-01-24)
+
+  * Updated Tagalog translations
+  * Updated Pillow to 10.2 to mitigate security vulnerabilities
+  * Improved resilience of instant navigation
+  * Fixed #6687: Updated Mermaid.js to version 10.7.0 (latest)
+  * Fixed #6652: Keyboard events in custom elements captured
+  * Fixed #6582: Instant navigation doesn't correctly handle alternate URLs
+  * Fixed #6565: Instant navigation doesn't allow for onclick handlers
+  * Fixed #6345: Instant navigation sometimes breaks browser back button
+  * Fixed #6334: Instant navigation doesn't correctly position anchors (Safari)
+  * Fixed #6275: Instant navigation doesn't correctly resolve after 404
+  * Fixed #6102: Instant navigation reloads page on same link navigation
+
+mkdocs-material-9.5.4+insiders-4.50.0 (2024-01-19)
+
+  * Added configurable logging capabilities to privacy plugin
+
+mkdocs-material-9.5.4 (2024-01-15)
+
+  * Fixed #6645: Local storage with invalid value can break site
+  * Fixed #6635: Tags icons before default ignored if default is set
+
+mkdocs-material-9.5.3+insiders-4.49.2 (2024-01-09)
+
+  * Fixed missing attribute lists extension for tags plugin
+  * Fixed #6627: New tags plugin crashes on Python 3.8
+
+mkdocs-material-9.5.3+insiders-4.49.1 (2024-01-07)
+
+  * Improved interop of new tags plugin with other plugins
+  * Fixed #6594: Tags plugin doesn't work with mkdocs-macros plugin
+  * Fixed #6569: Social plugin crashes if in different file system location
+
+mkdocs-material-9.5.3+insiders-4.49.0 (2023-12-29)
+
+  * Added support for exporting tags and mappings
+  * Added support for disabling tags and/or listings or both
+  * Fixed tag links from pages to listings on homepage
+
+mkdocs-material-9.5.3+insiders-4.48.0 (2023-12-23)
+
+  * Rewrite of tags plugin, now much more powerful
+  * Added support for nested tags (tag hierarchies, e.g. foo/bar)
+  * Added support for shadow tags (by list, prefix or suffix)
+  * Added support for custom tag layouts and templates
+  * Added support for hiding tags in table of contents
+  * Added support for configurable inline tag listings
+  * Added support for automatically linking to closest tag listing
+  * Added support for scoped listings (limit to subsection of site)
+  * Added support for multiple instances of tags plugin
+  * Added support for changing front matter property and template variable
+  * Added support for tag slugification format strings
+  * Fixed #6510: Projects plugin out of memory on Linux (4.47.1 regression)
+  * Fixed projects plugin not notifying plugins about serve mode
+  * Fixed projects plugin skipping projects on prefix match
+  * Deprecated tags_file and tags_extra_files settings
+  * Modernized tags plugin code base
+
+mkdocs-material-9.5.3 (2023-12-23)
+
+  * Limited version range of MkDocs to < 1.6
+  * Updated Macedonian translations
+  * Fixed #6520: Group plugin crashes when using mike
+  * Fixed #6494: Hide author's email address if disabled in git-authors plugin
+
+mkdocs-material-9.5.2+insiders-4.47.1 (2023-12-11)
+
+  * Improved editing experience for projects plugin
+  * Improved resilience of optimize and social plugin
+  * Fixed race condition when writing manifest in optimize and social plugin
+  * Fixed #6475: Logo not taking precedence over icon in social card
+  * Fixed #6399: Projects plugin doesn't pick up added/removed projects
+  * Fixed #6306: Projects plugin cache not correctly updated
+
+mkdocs-material-9.5.2 (2023-12-11)
+
+  * Fixed types for slugify settings in blog plugin config
+  * Fixed #6469: Horizontal scrollbars on MathJax containers
+
+mkdocs-material-9.5.1+insiders-4.47.0 (2023-12-08)
+
+  * Added support for staying on page when switching languages
+  * Added configurable logging capabilities to projects plugin
+  * Removed temporary warning on blog plugin authors file format change
+  * Fixed projects plugin logging messages twice on Linux systems
+  * Fixed projects plugin trying to hoist theme assets of divergent themes
+  * Fixed compatibility of optimize plugin and projects plugin
+  * Fixed compatibility of social plugin and projects plugin
+  * Fixed #6448: Code line selection broken for code blocks with custom ids
+  * Fixed #6437: Projects plugin crashing for certain site URL configurations
+  * Fixed #6414: Projects plugin doesn't prefix messages coming from projects
+
+mkdocs-material-9.5.1 (2023-12-08)
+
+  * Updated Greek translations
+  * Fixed #6464: Privacy plugin cannot be enabled
+  * Fixed #6461: Sorting blog posts ignores time component in date
+
+mkdocs-material-9.5.0 (2023-12-07)
+
+  Merged Insiders features of 'Goat's Horn' funding goal
+
+  * Added privacy plugin: automatic downloading of external assets
+  * Added support for card grids and grid layouts
+  * Added support for improved tooltips
+  * Added support for content tabs anchor links (deep linking)
+  * Added support for automatic dark/light mode
+  * Added support for document contributors
+
+mkdocs-material-9.4.14+insiders-4.46.0 (2023-11-26)
+
+  * Added support for author profiles in blog plugin
+  * Fixed custom index pages yielding two navigation items (4.45.0 regression)
+
+mkdocs-material-9.4.14 (2023-11-26)
+
+  * Added support for linking authors in blog posts
+
+mkdocs-material-9.4.13 (2023-11-26)
+
+  * Fixed #6365: Blog plugin pagination links to previous pages broken
+  * Fixed #5758: Updated Mermaid.js to version 10.6.1 (latest)
+
+mkdocs-material-9.4.12+insiders-4.45.0 (2023-11-24)
+
+  * Added support for sorting blog categories by post count or custom function
+  * Improved tags plugin to generate Unicode-aware slugs by default
+  * Fixed non-deterministic order of multiple authors in blog plugin
+
+mkdocs-material-9.4.12 (2023-11-24)
+
+  * Improved blog plugin to generate Unicode-aware slugs by default
+  * Fixed non-deterministic order of categories in blog plugin
+
+mkdocs-material-9.4.11+insiders-4.44.0 (2023-11-23)
+
+  * Added pagination settings for archive pages in blog plugin
+  * Added pagination settings for category pages in blog plugin
+
+mkdocs-material-9.4.11 (2023-11-23)
+
+  * Fixed #6364: Search plugin crashing when enabling theme while serving
+  * Fixed blog plugin crashing when disabling pagination
+
+mkdocs-material-9.4.10+insiders-4.43.1 (2023-11-19)
+
+  * Added third-party theme support in projects plugin, improving editing
+  * Fixed #6360: Projects plugin crashes when theme is not Material for MkDocs
+  * Fixed #6306: Projects plugin not reloading nested project configuration
+
+mkdocs-material-9.4.10 (2023-11-19)
+
+  * Fixed #6356: Version selector can't be disabled via mike's configuration
+  * Fixed #6281: Navigation not rendering due to Safari bug (9.4.2 regression)
+  * Fixed #6261: Navigation expansion animates on first load (9.4.2 regression)
+
+mkdocs-material-9.4.9 (2023-11-17)
+
+  * Fixed #6344: Long entries cutoff in table of contents
+  * Fixed #6336: Custom template for glob archive not working with pagination
+  * Fixed #6328: Blog plugin crashes for locales with dashes, e.g. pt-BR
+  * Fixed #6327: Copy-to-clipboard button doesn't trim trailing line feed
+  * Fixed #6302: Version strings not matched when using mike, only aliases
+  * Fixed instant navigation progress indicator for gzipped content in Chrome
+  * Fixed rendering bug on details marker rotation in Firefox
+
+mkdocs-material-9.4.8+insiders-4.43.0 (2023-11-05)
+
+  * Added support for GitLab committers (document contributors)
+  * Fixed #6264: Fixed compatibility with Python < 3.10
+  * Fixed #6254: Meta plugin not applying meta files to blog posts
+
+mkdocs-material-9.4.8 (2023-11-05)
+
+  * Fixed invalid local address replacement when using instant loading
+  * Fixed #6275: Crash after navigation caused 404 when using instant loading
+
+mkdocs-material-9.4.7+insiders-4.42.3 (2023-10-27)
+
+  * Fixed #6251: Cards in grids cut off on very small screens
+  * Fixed #6241: Using social plugin + static-i18n plugin errors
+
+mkdocs-material-9.4.7 (2023-10-27)
+
+  * Added Azerbaijani translations
+
+mkdocs-material-9.4.6+insiders-4.42.2 (2023-10-14)
+
+  * Fixed #6186: Privacy plugin ignores hash fragments on images
+  * Fixed #6180: Projects plugin crashing when adding or removing files
+
+mkdocs-material-9.4.6 (2023-10-14)
+
+  * Updated Danish and Norwegian (Nynorsk) translations
+  * Fixed #6169: Blog post metadata layout overflows on small screens
+
+mkdocs-material-9.4.5 (2023-10-10)
+
+  * Fixed sidebar auto-positioning (9.4.2 regression)
+  * Fixed #6166: Improve group plugin compatibility with Python < 3.10
+  * Fixed #6157: Hiding tags does not work (9.4.3 regression)
+
+mkdocs-material-9.4.4+insiders-4.42.1 (2023-10-05)
+
+  * Fixed spacing of related links in blog posts on small screens
+
+mkdocs-material-9.4.4 (2023-10-05)
+
+  * Added support for overriding text to be copied for code blocks
+  * Fixed broken layout in some browsers at breakpoints when using zoom
+  * Fixed #6132: Incomplete search highlighting for code blocks in titles
+
+mkdocs-material-9.4.3 (2023-10-02)
+
+  * Added support for instant navigation progress indicator
+  * Improved spacing and alignment of tags
+  * Moved back-to-top button into separate partial
+  * Fixed #6104: Indentation for some code blocks lost in search
+  * Fixed #6094: Blog post metadata overlaps with footer on small screens
+  * Fixed #6069: Blog plugin crashes for categories with non-ASCII names
+
+  Updated templates
+
+  - base.html
+
+mkdocs-material-9.4.2 (2023-09-25)
+
+  * Updated Slovenian translations
+  * Added animation to sidebar navigation expansion and collapse
+  * Added support for auto-replacement of document head for instant navigation
+  * Improved compatibility of new emoji extension with Python < 3.10
+  * Switched regex dependency to use minimal version
+  * Refactored alignment and spacing of sidebar navigation
+  * Fixed expansion button not focusable via keyboard in sidebar navigation
+  * Fixed viewport offset restoration on first load when using instant navigation
+  * Fixed accidental highlight of non-clickable elements in blog plugin sidebar
+  * Fixed #6041: Blog plugin crashes when nav is defined and blog not included
+  * Fixed #5972: Blog plugin ignores section index pages in paginated views
+  * Fixed #5954: Repeated click on anchor ignored when using instant navigation
+  * Fixed #5742: Keyboard navigation broken when using instant navigation
+
+  Updated templates
+
+  * partials/nav-item.html
+  * blog-post.html
+
+mkdocs-material-9.4.1 (2023-09-22)
+
+  * Improved colors and contrast in dark mode
+  * Improved admonition borders to match font weight
+  * Switched content tabs to neutral color
+
+mkdocs-material-9.4.0 (2023-09-21)
+
+  * Added Belarusian translations
+  * Added version info to entrypoint of package
+  * Added emoji extension as a replacement for materialx
+  * Improved slate color scheme (dark mode) - now even darker
+  * Restructured project to improve development experience
+  * Updated MkDocs to 1.5.3
+  * Fixed #3890: Development mode crashes on Linux
+
+mkdocs-material-9.3.2+insiders-4.42.0 (2023-09-19)
+
+  * Added support for using git submodules in projects plugin
+  * Added support for transforming project configurations
+  * Improved resilience of optimize and blog plugin
+  * Fixed optimize plugin crashing on .jpeg extension
+  * Fixed project URLs not using site URLs in projects plugin
+
+mkdocs-material-9.3.2 (2023-09-19)
+
+  * Updated Slovenian translations
+  * Updated Python dependencies in requirements to use minimum versions
+  * Fixed #6017: Code highlighting inconsistent in Community and Insiders edition
+  * Fixed #6001: Contributor avatars display incorrectly in Firefox
+  * Fixed #6000: Blog post drafts are included in navigation
+
+mkdocs-material-9.3.1+insiders-4.41.0 (2023-09-11)
+
+  * Improved multi-instance support for optimize plugin
+  * Added inclusion and exclusion patterns for optimize plugin
+  * Added transparent keyword for color handling in social plugin
+  * Changed default quality of PNGs to 3 in optimize plugin
+  * Fixed #5979: meta file not detected in root of docs directory
+
+mkdocs-material-9.3.1 (2023-09-11)
+
+  * Fixed crash of group plugin when used together with hooks
+
+mkdocs-material-9.3.0 (2023-09-11)
+
+  * Improved configuration sharing between Community and Insiders edition
+  * Added experimental built-in group plugin for enabling plugins conditionally
+  * Added new settings in tags plugin for enabling/disabling
+  * Dropped support for Python 3.7 (EOL)
+
+mkdocs-material-9.2.8+insiders-4.40.4 (2023-09-04)
+
+  * Fixed privacy plugin choking on boolean HTML5 attributes
+  * Fixed wrapping of inline code blocks in typeset table of contents
+  * Fixed blog plugin error when running under dirty reload
+
+mkdocs-material-9.2.8 (2023-09-04)
+
+  * Updated Italian and Russian translations
+  * Fixed #5952: Combining blog and tags plugin leads to wrong links
+  * Fixed #5951: Blog plugin ignores post title in metadata
+  * Fixed #5949: Blog plugin ignores post linked in nav
+
+mkdocs-material-9-2.7+insiders-4.40.3 (2023-09-02)
+
+  * Fixed #5946: Docker image missing pngquant for optimize plugin
+
+mkdocs-material-9.2.7 (2023-09-02)
+
+  * Switched dependencies to compatible release clauses
+  * Removed readtime and lxml dependencies for blog plugin
+  * Reduced size of Docker image to improve CI build performance
+  * Fixed #5945: Incorrect footer navigation for sibling pages of blog
+  * Fixed #5939: Page jumps when changing color palette (Firefox 117)
+  * Fixed #5901: Announcement bar reappears when using instant loading
+  * Fixed #5824: Allow to customize styles of sequence diagrams
+
+mkdocs-material-9-2.6+insiders-4.40.2 (2023-08-31)
+
+  * Added configurable error handling capabilities for social plugin
+  * Fixed #5922: Blog plugin shows no posts when building a standalone blog
+  * Fixed #5914: Tags plugin tags_extra_files errors (4.39.3 regression)
+  * Fixed #5904: Blog plugin sometimes excludes files (4.40.1 regression)
+
+mkdocs-material-9-2.6 (2023-08-31)
+
+  * Added Basque translations
+  * Added template for simple redirects
+  * Improved blog plugin interop by moving view generation to on_files
+  * Fixed #5924: Social plugin still checks dependencies when disabled
+  * Fixed #5916: Blog plugin crashes on Python 3.8 (9.2.0 regression)
+
+mkdocs-material-9-2.5+insiders-4.40.1 (2023-08-27)
+
+  * Fixed #5902: ResizeObserver polyfill not detected by privacy plugin
+  * Fixed empty category pages in blog plugin (4.40.0 regression)
+
+mkdocs-material-9-2.5 (2023-08-27)
+
+  * Fixed error in dirty serve mode when using blog plugin
+  * Fixed page title not being consistent in blog plugin pagination
+  * Fixed #5899: Blog plugin pagination breaks when disabling directory URLs
+
+mkdocs-material-9.2.4+insiders-4.40.0 (2023-08-26)
+
+  * Added logo, title and description options to social plugin default layouts
+  * Fixed privacy plugin compatibility issue with Python < 3.10
+  * Fixed #5896: Blog plugin errors when using custom index pages
+
+mkdocs-material-9.2.4 (2023-08-26)
+
+  * Added version to bug report name in info plugin
+  * Updated Afrikaans translations
+
+mkdocs-material-9.2.3+insiders-4.39.3 (2023-08-24)
+
+  * Fixed lxml dependency missing in Docker image (4.39.2 regression)
+
+mkdocs-material-9.2.3+insiders-4.39.2 (2023-08-23)
+
+  * Fixed color palette toggle being reversed (9.2.0 regression)
+
+mkdocs-material-9.2.3 (2023-08-22)
+
+  * Fixed blog plugin rendering wrongly with markdown.extensions.toc
+  * Fixed blog plugin entrypoint generation
+
+mkdocs-material-9.2.2 (2023-08-22)
+
+  * Fixed #5880: Blog plugin failing when building a standalone blog
+  * Fixed #5881: Blog plugin not compatible with Python < 3.10
+
+mkdocs-material-9.2.1 (2023-08-21)
+
+  * Fixed #5879: Blog plugin failing when building a standalone blog
+  * Fixed error in blog plugin when using draft tagging on future date
+  * Fixed error in blog plugin when toc extension is not enabled
+
+mkdocs-material-9.2.0+insiders-4.39.1 (2023-08-21)
+
+  * Fixed git diff in tags plugin after merging back 9.2.0 changes
+
+mkdocs-material-9.2.0 (2023-08-21)
+
+  Additions and improvements
+
+  * Added blogging support via built-in blog plugin
+  * Added support for Chinese language segmentaiton in search plugin
+  * Added support for adding custom dates to blog posts
+  * Added support for paginating archive and category pages
+  * Added support for annotations (outside of code blocks)
+  * Added support for navigation icons
+  * Added support for navigation pruning
+  * Added support for navigation status
+  * Added support for customizing site icons
+  * Added support for customizing (code) annotation icons
+  * Added focus outline to admonitions and details
+  * Added prompt for bug report name to info plugin
+  * Added Luxembourgish translations
+  * Improved rendering of (code) annotation markers
+  * Improved print styles for (code) annotations
+  * Improved customizability of navigation tabs
+  * Improved interop of plugins with external tools like mike
+  * Improved interop of blog plugin with awesome pages plugin
+  * Improved header partial by moving buttons into separate partials
+  * Improved clarity of site_url warning in social plugin
+  * Improved blog plugin to automatically setup directory structure
+  * Switched info plugin to importlib to mitigate deprecations
+  * Automatically download ResizeObserver polyfill when necessary
+  * Automatically add iframe-worker polyfill when necessary in offline plugin
+  * Automatically focus and bring up keyboard on touch devices
+  * Updated Serbo-Croatian translations
+  * Updated MkDocs to 1.5.2
+
+  Removals
+
+  * Removed Universal Analytics integration
+  * Removed ancient polyfills to reduce size of bundled JavaScript by 20%
+  * Removed necessity for Array.flat and Array.flatMap polyfill
+  * Removed announcement bar button when JavaScript is not available
+
+  Fixes
+
+  * Fixed rendering of tags when announcement bar is present
+  * Fixed tags plugin rendering pages excluded by other plugins
+  * Fixed #5132: Blog plugin requires nav entry in mkdocs.yml
+  * Fixed #5599: Insufficient contrast for default link color
+  * Fixed #5715: Blog plugin missing integrated table of contents in pagination
+  * Fixed #5806: Version selector not hoverable on some Android devices
+  * Fixed #5826: Blog post drafts with tags show up in tags index
+
+mkdocs-material-9.1.21+insiders-4.39.0 (2023-08-01)
+
+  * Added support for hoisting theme media files when building projects
+  * Added support for sorting pages on tags index for tags plugin
+  * Added support for adding date of last update to blog posts
+  * Fixed #5797: Parse error in typeset plugin (4.38.1 regression)
+
+mkdocs-material-9.1.21+insiders-4.38.1 (2023-08-01)
+
+  * Improved nested serve mode for projects plugin
+  * Improved compat in privacy plugin with third-party plugins
+  * Fixed #5790: Typeset plugin ignores data-toc-label attribute
+  * Fixed #5778: Interplay of privacy plugin with git-revision-date-localized
+  * Fixed #5773: Info plugin erroring when community edition is in beta
+
+mkdocs-material-9.1.21+insiders-4.38.0 (2023-07-29)
+
+  * Added projects plugin for building nested projects
+  * Updated privacy plugin to new MkDocs API
+
+mkdocs-material-9.1.21+insiders-4.37.1 (2023-07-28)
+
+  * Updated MkDocs to 1.5.1
+  * Fixed deprecation warning in social plugin due to MkDocs upgrade
+  * Fixed #5772: Privacy plugin fails due to API change in MkDocs
+
+mkdocs-material-9.1.21 (2023-07-27)
+
+  * Fixed MkDocs 1.4 compat issue in social plugin (9.1.20 regression)
+
+mkdocs-material-9.1.20 (2023-07-27)
+
+  * Fixed deprecation warnings for social plugin
+
+mkdocs-material-9.1.19 (2023-07-18)
+
+  * Added support for MkDocs 1.5+
+  * Fixed #5699: Improve error reporting in social plugin
+
+mkdocs-material-9.1.18+insiders-4.37.0 (2023-07-07)
+
+  * Added support for overriding social cards settings per page
+  * Added new social card default/only/image layout
+  * Improved resilience of optimize and social plugin
+  * Fixed rendering bugs for pruned navigation items
+  * Fixed jumping of content tabs anchor links when instant loading is enabled
+  * Fixed #5676: Optimize plugin doesn't check for pngquant
+
+mkdocs-material-9.1.18 (2023-07-03)
+
+  * Updated Danish translations
+  * Added support for installing user requirements in Docker image
+  * Fixed #5655: Search separator with lookbehind breaks highlighting
+
+mkdocs-material-9.1.17+insiders-4.36.1 (2023-06-23)
+
+  * Fixed #5618: Date comparison breaking for drafts in blog plugin
+
+mkdocs-material-9.1.17 (2023-06-23)
+
+  * Fixed #5633: Code annotations with nested lists incorrectly mounted
+  * Fixed #5628: Regression in new social plugin configuration scheme
+
+mkdocs-material-9.1.16+insiders-4.36.0 (2023-06-15)
+
+  * Added support for instant prefetching to speed up slow connections
+  * Improved stability of anchor link removal in built-in typeset plugin
+  * Improved performance of regular expressions in typeset plugin
+  * Removed unnecessary import test for cairosvg in optimize plugin
+  * Fixed #5590: regular expression for anchor link removal too greedy
+
+mkdocs-material-9.1.16 (2023-06-15)
+
+  * Updated Indonesian translations
+  * Ensure scroll bar follows color scheme of operating system
+
+mkdocs-material-9.1.15+insiders-4.35.3 (2023-06-01)
+
+  * Fixed #5579: Abbreviations in headlines filtered by typeset plugin
+
+mkdocs-material-9.1.15+insiders-4.35.2 (2023-05-29)
+
+  * Fixed #5555: Blog plugin crashes when computing readtime for emojis
+
+mkdocs-material-9.1.15 (2023-05-29)
+
+  * Fixed #5566: Indicate color scheme to operating system
+  * Fixed #5565: Update Dockerfile to latest version of base image
+  * Fixed #5554: Add additional version tags (9, 9.1) to Docker image
+  * Fixed #5536: Strip tags of ARIA labels in table of contents
+
+mkdocs-material-9.1.14+insiders-4.35.1 (2023-05-20)
+
+  * Fixed internal handling of errors in social plugin
+
+mkdocs-material-9.1.14+insiders-4.35.0 (2023-05-20)
+
+  * Improve editing experience and stability of social plugin
+  * Added support for custom layout syntax validation in social plugin
+  * Added support for layer origin for easier placement in social plugin
+  * Added support for in- and exclusion patterns in social plugin
+  * Catch and print syntax errors in custom layouts
+
+mkdocs-material-9.1.14 (2023-05-20)
+
+  * Updated Armenian and Greek translations
+
+mkdocs-material-9.1.13+insiders-4.34.1 (2023-05-16)
+
+  * Disable social plugin debug mode by default on mkdocs build
+  * Added warning in social plugin debug mode when font style couldn't be found
+  * Set default concurrency of built-in multi-threaded plugins to CPUs - 1
+  * Fixed #5521: Social plugin triggers race condition when downloading fonts
+  * Fixed #5515: Social plugin crashes when concurrency is set to 1
+
+mkdocs-material-9.1.13 (2023-05-16)
+
+  * Fixed #5517: Social plugin crashes for some fonts (e.g. Open Sans)
+
+mkdocs-material-9.1.12+insiders-4.34.0 (2023-05-14)
+
+  * Added support for new overflow mode to auto-fit text in social plugin
+  * Reduced subtle rendering bugs in (code) annotations due to subpixel rounding
+  * Improved print styles for (code) annotation lists
+  * Improved performance of social plugin, now 3x as fast
+  * Improved interop of typeset plugin with MkDocstrings
+  * Fixed logo location for variants of default template in social plugin
+  * Fixed #5446: Built-in typeset plugin picks up headings in code blocks
+
+mkdocs-material-9.1.12+insiders-4.33.2 (2023-05-12)
+
+  * Fixed #5508: Social plugin crashes trying to copy cards on Docker/Windows
+  * Fixed #5507: Social plugin crashes on serve when layouts folder doesn't exist
+  * Fixed #5505: Social plugin trying to resolve logo in wrong location
+  * Fixed #5496: Annotations with nested lists incorrectly mounted
+  * Fixed #5493: Social plugin crashes on Python 3.8
+
+mkdocs-material-9.1.12 (2023-05-12)
+
+  * Updated Bengali (Bangla) translations
+  * Fixed #5503: Docker image publish errors on uppercase characters
+  * Fixed #5407: Auto-pause media when in hidden content tabs
+
+mkdocs-material-9.1.11+insiders-4.33.1 (2023-05-09)
+
+  * Added support for SVG background images in social plugin
+
+mkdocs-material-9.1.11 (2023-05-08)
+
+  * Fixed #5487: Social plugin crashes without options (9.1.10 regression)
+
+mkdocs-material-9.1.10+insiders-4.33.0 (2023-05-08)
+
+  * Added support for custom layouts for social plugin
+  * Added support for background images for social cards
+
+mkdocs-material-9.1.10 (2023-05-08)
+
+  * Added cards_layout_options setting for social cards
+  * Deprecated cards_color and cards_font setting for social cards
+
+mkdocs-material-9.1.9 (2023-05-02)
+
+  * Added Telugu, Kannada and Sanskrit translations
+  * Fixed #5428: Fixed margins for light/dark mode images in figures
+  * Fixed #5420: Social plugin crashing for some specific Google Fonts
+  * Fixed #5160: Instant loading makes code annotations jump (9.1.1 regression)
+  * Fixed #4920: Social plugin not loading logo from custom icon set
+  * Fixed social plugin crashing when only code font is specified
+
+mkdocs-material-9.1.8 (2023-04-24)
+
+  * Fixed #5417: Theme breaks when palette is not defined (9.1.7 regression)
+
+mkdocs-material-9.1.7+insiders-4.32.6 (2023-04-22)
+
+  * Fixed #5336: Interplay of blog plugin with git-revision-date-localized
+
+mkdocs-material-9.1.7 (2023-04-22)
+
+  * Updated Persian (Farsi) and Turkish translations
+  * Fixed #5401: Added missing flag to disable built-in tags plugin
+  * Fixed #5206: Ensure defaults are set for primary and accent colors
+  * Fixed unnecessary inclusion of palette CSS when unused
+
+mkdocs-material-9.1.6+insiders-4.32.5 (2023-04-07)
+
+  * Fixed #5322: Navigation tabs hoist nested page icons
+
+mkdocs-material-9.1.6 (2023-04-07)
+
+  * Updated Persian (Farsi) translations
+  * Fixed #5300: Boxes in Mermaid sequence diagrams not color-abiding
+
+mkdocs-material-9.1.5 (2023-03-31)
+
+  * Updated Lithuanian and Japanese translations
+  * Updated Mermaid.js to version 9.4.3
+  * Fixed #5290: Footer previous/next labels cut-off for short page titles
+
 mkdocs-material-9.1.4+insiders-4.32.4 (2023-03-24)
 
   * Fixed #5241: Built-in typeset plugin jams navigation for anchors in headings
@@ -137,7 +1118,7 @@ mkdocs-material-9.0.8 (2023-01-29)
 mkdocs-material-9.0.7 (2023-01-28)
 
   * Improved accessibility of sidebar navigation
-  * Moved all translations into community edition
+  * Moved all translations into Community edition
   * Updated Polish and Portuguese (Brasilian) translations
   * Fixed info plugin terminating on subsequent reload when serving
   * Fixed #4910: Sidebar navigation labels have invalid ARIA roles
@@ -256,7 +1237,7 @@ mkdocs-material-8.5.11+insiders-4.27.0 (2022-12-20)
 
 mkdocs-material-8.5.11 (2022-11-30)
 
-  * Let it snow, see https://twitter.com/squidfunk/status/1597939243090788352
+  * Let it snow, see https://x.com/squidfunk/status/1597939243090788352
 
 mkdocs-material-8.5.10+insiders-4.26.6 (2022-11-28)
 
@@ -1948,7 +2929,7 @@ mkdocs-material-4.0.0 (2019-02-13)
 
 mkdocs-material-3.3.0 (2019-01-29)
 
-  * Moved Google Analytics integration into `head` using Google Tag Manager
+  * Moved Google Analytics integration into head using Google Tag Manager
   * Fixed #972: Unicode slugifier breaks table of contents blur on scroll
   * Fixed #974: Additional links in table of contents break blur on scroll
 

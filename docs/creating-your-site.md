@@ -1,6 +1,6 @@
 # Creating your site
 
-After you've [installed] Material for MkDocs, you can bootstrap your project 
+After you've [installed] Material for MkDocs, you can bootstrap your project
 documentation using the `mkdocs` executable. Go to the directory where you want
 your project to be located and enter:
 
@@ -16,7 +16,7 @@ Alternatively, if you're running Material for MkDocs from within Docker, use:
     docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
     ```
 
-=== "Windows"
+=== "Windows (cmd)"
 
     ```
     docker run --rm -it -v "%cd%":/docs squidfunk/mkdocs-material new .
@@ -37,18 +37,27 @@ This will create the following structure:
 
 ### Minimal configuration
 
-Simply add the following lines to `mkdocs.yml` to enable the theme:
+Simply set the `site_name` and add the following lines to `mkdocs.yml` to enable the theme:
 
-``` yaml
+``` yaml hl_lines="2-5"
+site_name: My site
+site_url: https://mydomain.org/mysite
 theme:
   name: material
 ```
 
+The `site_url` setting is important for a number of reasons.
+By default, MkDocs will assume that your site is hosted at the root of
+your domain. This is not the case, for example, when [publishing to GitHub
+pages] - unless you use a custom domain. Another reason is that some of the
+plugins require the `site_url` to be set, so you should always do this.
+
+  [publishing to GitHub pages]: publishing-your-site.md#github-pages
   [installation methods]: getting-started.md#installation
 
 ???+ tip "Recommended: [configuration validation and auto-complete]"
 
-    In order to minimize friction and maximize productivity, Material for MkDocs 
+    In order to minimize friction and maximize productivity, Material for MkDocs
     provides its own [schema.json][^1] for `mkdocs.yml`. If your editor supports
     YAML schema validation, it's definitely recommended to set it up:
 
@@ -66,9 +75,11 @@ theme:
               "yaml.customTags": [ // (1)!
                 "!ENV scalar",
                 "!ENV sequence",
-                "tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
-                "tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
-                "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+                "!relative scalar",
+                "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+                "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+                "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+                "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
               ]
             }
             ```
@@ -92,7 +103,7 @@ theme:
     If you already have a schema defined, or wish to self-host your schema to
     reduce duplication, you can add it via [$ref].
 
-  [configuration validation and auto-complete]: https://twitter.com/squidfunk/status/1487746003692400642
+  [configuration validation and auto-complete]: https://x.com/squidfunk/status/1487746003692400642
   [schema.json]: schema.json
   [vscode-yaml]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
   [settings.json]: https://code.visualstudio.com/docs/getstarted/settings
@@ -153,6 +164,30 @@ technical writing experience.
   [Building for offline usage]: setup/building-for-offline-usage.md
   [Building an optimized site]: setup/building-an-optimized-site.md
   [Markdown extensions]: setup/extensions/index.md
+
+## Templates
+
+If you want to jump start a new project, you can use one of our growing
+collection of templates:
+
+<div class="grid cards" markdown>
+
+-   :octicons-repo-template-24: &nbsp; __[Blog][blog-template]__
+
+    ---
+
+    Create a blog
+
+-   :octicons-repo-template-24: &nbsp; __[Social cards][social-cards-template]__
+
+    ---
+
+    Create documentation with social cards
+
+</div>
+
+[blog-template]: https://github.com/mkdocs-material/create-blog
+[social-cards-template]: https://github.com/mkdocs-material/create-social-cards
 
 ## Previewing as you write
 
@@ -225,3 +260,10 @@ or your private web space.
 
   [GitHub Pages]: publishing-your-site.md#github-pages
   [GitLab pages]: publishing-your-site.md#gitlab-pages
+
+If you intend to distribute your documentation as a set of files to be
+read from a local filesystem rather than a web server (such as in a
+`.zip` file), please read the notes about [building for offline
+usage].
+
+  [building for offline usage]: setup/building-for-offline-usage.md

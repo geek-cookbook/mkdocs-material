@@ -34,7 +34,7 @@ See additional configuration options:
 
 ### Admonition icons
 
-[:octicons-tag-24: 8.3.0][Admonition icons support]
+<!-- md:version 8.3.0 -->
 
 Each of the supported admonition types has a distinct icon, which can be changed
 to any icon bundled with the theme, or even a [custom icon]. Add the following
@@ -101,7 +101,6 @@ theme:
               quote: fontawesome/solid/quote-left
         ```
 
-  [Admonition icons support]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.3.0
   [custom icon]: ../setup/changing-the-logo-and-icons.md#additional-icons
   [supported types]: #supported-types
   [icon search]: icons-emojis.md#search
@@ -156,6 +155,40 @@ links, formatting, ...) after the type qualifier:
 
 </div>
 
+### Nested admonitions
+
+You can also include nested admonitions in your documentation. To do this, you
+can use your existing admonitions and indent the desired ones:
+
+``` markdown title="Nested Admonition"
+!!! note "Outer Note"
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+    
+    !!! note "Inner Note"
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+        nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+        massa, nec semper lorem quam in massa.
+```
+
+<div class="result" markdown>
+
+!!! note "Outer Note"
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+    
+    !!! note "Inner Note"
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+        nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+        massa, nec semper lorem quam in massa.
+</div>
+
 ### Removing the title
 
 Similar to [changing the title], the icon and title can be omitted entirely by
@@ -186,7 +219,7 @@ not work for [collapsible blocks]:
 ### Collapsible blocks
 
 When [Details] is enabled and an admonition block is started with `???` instead
-of `!!!`, the admonition is rendered as a collapsible block with a small toggle
+of `!!!`, the admonition is rendered as an expandable block with a small toggle
 on the right side:
 
 ``` markdown title="Admonition, collapsible"
@@ -243,7 +276,7 @@ only the `inline` modifier:
 
     ``` markdown
     !!! info inline end "Lorem ipsum"
-  
+
         Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Nulla et euismod nulla.
         Curabitur feugiat, tortor non consequat
@@ -286,12 +319,12 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
   [^1]:
     Previously, some of the supported types defined more than one qualifier.
     For example, authors could use `summary` or `tldr` as alternative qualifiers
-    to render an [`abstract`](#type:abstract) admonition. As this increased the
+    to render an [`abstract`](#+type:abstract) admonition. As this increased the
     size of the CSS that is shipped with Material for MkDocs, the additional
     type qualifiers are now all deprecated and will be removed in the next major
     version. This will also be mentioned in the upgrade guide.
 
-[`note`](#type:note){ #type:note }
+<!-- md:option type:note -->
 
 :   !!! note
 
@@ -299,7 +332,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`abstract`](#type:abstract){ #type:abstract }
+<!-- md:option type:abstract -->
 
 :   !!! abstract
 
@@ -307,7 +340,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`info`](#type:info){ #type:info }
+<!-- md:option type:info -->
 
 :   !!! info
 
@@ -315,7 +348,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`tip`](#type:tip){ #type:tip }
+<!-- md:option type:tip -->
 
 :   !!! tip
 
@@ -323,7 +356,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`success`](#type:success){ #type:success }
+<!-- md:option type:success -->
 
 :   !!! success
 
@@ -331,7 +364,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`question`](#type:question){ #type:question }
+<!-- md:option type:question -->
 
 :   !!! question
 
@@ -339,7 +372,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`warning`](#type:warning){ #type:warning }
+<!-- md:option type:warning -->
 
 :   !!! warning
 
@@ -347,7 +380,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`failure`](#type:failure){ #type:failure }
+<!-- md:option type:failure -->
 
 :   !!! failure
 
@@ -355,7 +388,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`danger`](#type:danger){ #type:danger }
+<!-- md:option type:danger -->
 
 :   !!! danger
 
@@ -363,7 +396,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`bug`](#type:bug){ #type:bug }
+<!-- md:option type:bug -->
 
 :   !!! bug
 
@@ -371,7 +404,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`example`](#type:example){ #type:example }
+<!-- md:option type:example -->
 
 :   !!! example
 
@@ -379,7 +412,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`quote`](#type:quote){ #type:quote }
+<!-- md:option type:quote -->
 
 :   !!! quote
 
@@ -391,8 +424,8 @@ the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
 
 ### Classic admonitions
 
-Prior to version [:octicons-tag-24: 8.5.6][Admonition modern], admonitions had
-a slightly different appearance:
+Prior to version <!-- md:version 8.5.6 -->, admonitions had a slightly
+different appearance:
 
 !!! classic "Note"
 
@@ -426,8 +459,6 @@ If you want to restore this appearance, add the following CSS to an
     extra_css:
       - stylesheets/extra.css
     ```
-
-[Admonition modern]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.5.6
 
 ### Custom admonitions
 
@@ -504,5 +535,5 @@ After applying the customization, you can use the custom admonition type:
 
 </div>
 
-  [custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/.icons
+  [custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
   [additional style sheet]: ../customization.md#additional-css
